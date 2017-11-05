@@ -159,6 +159,10 @@ Vagrant.configure(2) do |config|
      # execute son-emu installation
      cd /home/sonata/son-emu
      sudo python setup.py develop
+
+     # install son-tutorial
+     cd /home/sonata
+     git clone https://github.com/hadik3r/son-tutorials.git
      
      SHELL
 
@@ -281,6 +285,8 @@ Vagrant.configure(2) do |config|
      sudo docker build -t webserver .
      cd /demo_services/vcdn-client
      sudo docker build -t vcdn-client .
+     
+     export DISPLAY=131.234.250.214:0
 
     SHELL
 
